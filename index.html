@@ -170,7 +170,7 @@ html {
        for (var i = 0; i < sURLVariables.length; i++) {
         var sParametro = sURLVariables[i].split('=');
         if (sParametro[0] == sParametroNombre) {
-          return decodeURIComponent(sParametro[1]);
+          return (sParametro[1]);
         }
       }
      return null;
