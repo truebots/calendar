@@ -1,248 +1,244 @@
-
-    
 <html>
-        <head>
-        
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>DatePicker</title>
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-            <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-            <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-rel = "stylesheet">
-<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<head>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DatePicker</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<style>
-html {
-  font-size: 19px;
-}
-.ui-datepicker {
-    margin: 5px auto 0;
-    height:300px;
-      width:300px;
-    /*-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);*/
-}
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-    .ui-datepicker table {
-        width: 100%;
-        font-size: 12pt;
-    }
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-.ui-datepicker-header {
-    background: #3399ff;
-    color: #ffffff;
-    border-width: 1px 0 0 0;
-    border-style: solid;
-    border-color: #3399ff;
-}
-
-.ui-datepicker-title {
-    text-align: center;
-    font-size: 17px;
-
-}
-
-.ui-datepicker-prev {
-    float: left;
-    cursor: pointer;
-    background-position: center -30px;
-}
-
-.ui-datepicker-next {
-    float: right;
-    cursor: pointer;
-    background-position: center 0px;
-}
-.ui-widget-content {
-    color : #333333;
-    background:#ffffff;
-    border:1px solid #ffffff;
-
-}
-.ui-datepicker thead {
-    background-color: #f7f7f7;
-
-    /*border-bottom: 1px solid #bbb;*/
-}
-
-.ui-datepicker th {
-    text-transform: uppercase;
-    font-size: 10pt;
-    color: #666666;
-    /*text-shadow: 1px 0px 0px #fff;*/
-    /*filter: dropshadow(color=#fff, offx=1, offy=0);*/
-}
-
-.ui-datepicker tbody td {
-    padding: 0;
-    background-color:#ffffff;
-    color:#ffffff;
-    /*border-right: 1px solid #808080;*/
-}
-
-    .ui-datepicker tbody td:last-child {
-        border-right: 0px;
-    }
-
-.ui-datepicker tbody tr {
-    border-bottom: 1px solid  #ffffff;
-}
-
-    .ui-datepicker tbody tr:last-child {
-        border-bottom: 0px;
-    }
-
-.ui-datepicker a {
-    text-decoration: none;
-}
-
-.ui-datepicker td span, .ui-datepicker td a {
-    display: inline-block;
-    /*font-weight: bold;*/
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    line-height: 30px;
-    color: #ffffff;
-    /*text-shadow: 1px 1px 0px #fff;*/
-    /*filter: dropshadow(color=#fff, offx=1, offy=1);*/
-}
-
-.ui-datepicker-calendar .ui-state-default {
-      background: #ffffff;
-      border:1px solid #ffffff;
-      height:40px;
-      width:40px;
-
-}
-
-.ui-datepicker-calendar .ui-state-hover {
-    background: #33adff;
-    color: #FFFFFF;
-}
-
-.ui-datepicker-calendar .ui-state-active {
-    background: #33adff;
-    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
-    -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
-    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
-    color: #e0e0e0;
-    text-shadow: 0px 1px 0px #4d7a85;
-    border: 1px solid #55838f;
-    position: relative;
-    margin: -1px;
-}
-
-.ui-datepicker-unselectable .ui-state-default {
-    background: #ffffff;
-    color: #000;
-}
-
-</style>
-            <script>
-                (function(d, s, id){
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_US/messenger.Extensions.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'Messenger'));
-    
-    
-                </script>  
-            <script>
-                function obtenerValorParametro(sParametroNombre) {
-    var sPaginaURL2 = document.location.href;
-    console.log(sPaginaURL2);
-    var sPaginaURL= sPaginaURL2.split("?");
-    
-     var sURLVariables = sPaginaURL[1].split('&');
-       for (var i = 0; i < sURLVariables.length; i++) {
-        var sParametro = sURLVariables[i].split('=');
-        if (sParametro[0] == sParametroNombre) {
-          return (sParametro[1]);
+    <style>
+        html {
+            font-size: 19px;
         }
-      }
-     return null;
-    }
-    
-    
-    
-            </script>
         
+        .ui-datepicker {
+            margin: 5px auto 0;
+            height: 300px;
+            width: 300px;
+            /*-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);*/
+        }
         
-        </head>
-        <body>
-                <div class="pre-con">
-                    </div>
-                    <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <form id="datetime">
-                                <article id="page_1">
-                                    
-                                   
-                                    <center>
-                                            <br>
-                                    <label>Select a date:</label>
-                                    <div id="W1" class="warning">
-                                        <p>A selection is required</p>
-                                    </div>
-                                </center>
-                                    <div   id="datepicker" ></div>
-                                    
-                                    <button type="button" class="btn btn-primary btn-lg btn-block" onClick="direccion($('#datepicker').val())">Next</button>
+        .ui-datepicker table {
+            width: 100%;
+            font-size: 12pt;
+        }
+        
+        .ui-datepicker-header {
+            background: #3399ff;
+            color: #ffffff;
+            border-width: 1px 0 0 0;
+            border-style: solid;
+            border-color: #3399ff;
+        }
+        
+        .ui-datepicker-title {
+            text-align: center;
+            font-size: 17px;
+        }
+        
+        .ui-datepicker-prev {
+            float: left;
+            cursor: pointer;
+            background-position: center -30px;
+        }
+        
+        .ui-datepicker-next {
+            float: right;
+            cursor: pointer;
+            background-position: center 0px;
+        }
+        
+        .ui-widget-content {
+            color: #333333;
+            background: #ffffff;
+            border: 1px solid #ffffff;
+        }
+        
+        .ui-datepicker thead {
+            background-color: #f7f7f7;
+            /*border-bottom: 1px solid #bbb;*/
+        }
+        
+        .ui-datepicker th {
+            text-transform: uppercase;
+            font-size: 10pt;
+            color: #666666;
+            /*text-shadow: 1px 0px 0px #fff;*/
+            /*filter: dropshadow(color=#fff, offx=1, offy=0);*/
+        }
+        
+        .ui-datepicker tbody td {
+            padding: 0;
+            background-color: #ffffff;
+            color: #ffffff;
+            /*border-right: 1px solid #808080;*/
+        }
+        
+        .ui-datepicker tbody td:last-child {
+            border-right: 0px;
+        }
+        
+        .ui-datepicker tbody tr {
+            border-bottom: 1px solid #ffffff;
+        }
+        
+        .ui-datepicker tbody tr:last-child {
+            border-bottom: 0px;
+        }
+        
+        .ui-datepicker a {
+            text-decoration: none;
+        }
+        
+        .ui-datepicker td span,
+        .ui-datepicker td a {
+            display: inline-block;
+            /*font-weight: bold;*/
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 30px;
+            color: #ffffff;
+            /*text-shadow: 1px 1px 0px #fff;*/
+            /*filter: dropshadow(color=#fff, offx=1, offy=1);*/
+        }
+        
+        .ui-datepicker-calendar .ui-state-default {
+            background: #ffffff;
+            border: 1px solid #ffffff;
+            height: 40px;
+            width: 40px;
+        }
+        
+        .ui-datepicker-calendar .ui-state-hover {
+            background: #33adff;
+            color: #FFFFFF;
+        }
+        
+        .ui-datepicker-calendar .ui-state-active {
+            background: #33adff;
+            -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+            -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+            box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+            color: #e0e0e0;
+            text-shadow: 0px 1px 0px #4d7a85;
+            border: 1px solid #55838f;
+            position: relative;
+            margin: -1px;
+        }
+        
+        .ui-datepicker-unselectable .ui-state-default {
+            background: #ffffff;
+            color: #000;
+        }
+    </style>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/messenger.Extensions.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'Messenger'));
+    </script>
+    <script>
+        function obtenerValorParametro(sParametroNombre) {
+            var sPaginaURL2 = document.location.href;
+            console.log(sPaginaURL2);
+            var sPaginaURL = sPaginaURL2.split("?");
+
+            var sURLVariables = sPaginaURL[1].split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParametro = sURLVariables[i].split('=');
+                if (sParametro[0] == sParametroNombre) {
+                    return (sParametro[1]);
+                }
+            }
+            return null;
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div class="pre-con">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form id="datetime">
+                    <article id="page_1">
+
+
+                        <center>
+                            <br>
+                            <label>Select a date:</label>
+                            <div id="W1" class="warning">
+                                <p>A selection is required</p>
+                            </div>
+                        </center>
+                        <div id="datepicker"></div>
+
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onClick="direccion($('#datepicker').val())">Next</button>
+                        <br>
+                        <div id="pro" style="display: none;">
+                            <p>loading...</p>
+                        </div>
+
+                    </article>
+                    <article id="page_2" style="display: none;">
+                        <div class="timepicker">
+
+                            <div class="above_timepicker">
+                                <br>
+                                <button type="button" class="btn btn-outline-primary" onClick="arti()">Pick another Date</button>
+
+
+                                <div class="user_timezone"></div>
+                            </div>
+                            <br>
+                            <center>
+                                <div class="timestart">
+
+
                                     <br>
-                                    <div id="pro" style="display: none;">
-                                            <p>loading...</p>
+
+                                    <label>What time will your event start:</label>
+                                    <div id="W2" class="warning">
+
+
+
                                     </div>
-    
-                                </article>
-                                <article id ="page_2" style="display: none;">
-                                    <div class="timepicker">
-                                        
-                                        <div class="above_timepicker">
-                                                <br>
-                                                <button type="button" class="btn btn-outline-primary" onClick="arti()">Pick another Date</button>
-        
-                                            
-                                                <div class="user_timezone"></div>
-                                        </div>
-                                        <br>
-                                        <center>
-                                        <div class="timestart">
-                                               
-                                               
-                                                <br>   
-                                                
-                                            <label>What time will your event start:</label>
-                                            <div id="W2" class="warning">
-                                                    
-                                                   
-                                                
-                                            </div>
-                                            <input type="text" id="time_start" class="hidden">
-                                            <select name="OS" id="timestartpi" class="selectpicker form-control" onchange="admSelectCheck();">
+                                    <input type="text" id="time_start" class="hidden">
+                                    <select name="OS" id="timestartpi" class="selectpicker form-control" onchange="admSelectCheck();">
                                             </select>
-                                        </div>
-                                        <div class="timeend">
-                                                <br>
-                                                <br>
-                                            <label>What time will your event end:</label>
-                                            <div id="W3" class="warning">
-                                                
-                                            </div>
-                                            <select name="OS" id="timestartpi2" class="selectpicker form-control">
+                                </div>
+                                <div class="timeend">
+                                    <br>
+                                    <br>
+                                    <label>What time will your event end:</label>
+                                    <div id="W3" class="warning">
+
+                                    </div>
+                                    <select name="OS" id="timestartpi2" class="selectpicker form-control">
                                                     <br>    
                                                 <button type="button" class="btn btn-primary btn-lg btn-block" onClick="agendar($('#datepicker').val(),$('#timestartpi').val(),$('#timestartpi2').val())">Done</button>
        
@@ -294,7 +290,7 @@ html {
         "bufferTime":obtenerValorParametro("bufferTime"),"bookingDays":obtenerValorParametro("bookingDays"),"eventTitle":obtenerValorParametro("eventTitle"),
         "eventDescription":obtenerValorParametro("eventDescription"),"eventStatus":obtenerValorParametro("eventStatus"),
         "eventDurationMin":obtenerValorParametro("eventDurationMin"),"eventDurationMax":obtenerValorParametro("eventDurationMax"),
-        "enableRealSlots":obtenerValorParametro("enableRealSlots")};
+        "enableRealSlots":obtenerValorParametro("enableRealSlots"),"tokenUser":obtenerValorParametro("tokenUser")};
     
 
     
@@ -304,7 +300,7 @@ html {
                     datet=fechaform;
                     $.ajax({
                             type: "GET",
-                            url: "https://us-central1-secure-potion-243418.cloudfunctions.net/function-gcalendar-1?callback=?",
+                            url: "https://us-central1-secure-potion-243418.cloudfunctions.net/CL-"+query.tokenUser+"-CF-EN?callback=?",
     
                             data: {
                                 calendarId: query.calendarId,
@@ -374,7 +370,7 @@ html {
         "bufferTime":obtenerValorParametro("bufferTime"),"bookingDays":obtenerValorParametro("bookingDays"),"eventTitle":obtenerValorParametro("eventTitle"),
         "eventDescription":obtenerValorParametro("eventDescription"),"eventStatus":obtenerValorParametro("eventStatus"),
         "eventDurationMin":obtenerValorParametro("eventDurationMin"),"eventDurationMax":obtenerValorParametro("eventDurationMax"),
-        "enableRealSlots":obtenerValorParametro("enableRealSlots")};
+        "enableRealSlots":obtenerValorParametro("enableRealSlots"),"tokenUser":obtenerValorParametro("tokenUser")};
     
                     
 
@@ -421,7 +417,7 @@ html {
     "bufferTime":obtenerValorParametro("bufferTime"),"bookingDays":obtenerValorParametro("bookingDays"),"eventTitle":obtenerValorParametro("eventTitle"),
     "eventDescription":obtenerValorParametro("eventDescription"),"eventStatus":obtenerValorParametro("eventStatus"),
     "eventDurationMin":obtenerValorParametro("eventDurationMin"),"eventDurationMax":obtenerValorParametro("eventDurationMax"),
-    "enableRealSlots":obtenerValorParametro("enableRealSlots"), "token":obtenerValorParametro("token")};
+    "enableRealSlots":obtenerValorParametro("enableRealSlots"), "token":obtenerValorParametro("token"),"tokenUser":obtenerValorParametro("tokenUser")};
     
     document.getElementById('page_1').style.display = 'none';
     var f= fecha1.split("/");
@@ -431,7 +427,7 @@ html {
     
     ($.ajax({
                     type: "GET",
-                    url: "https://us-central1-secure-potion-243418.cloudfunctions.net/function-addEvent?callback=?",
+                    url: "https://us-central1-secure-potion-243418.cloudfunctions.net/CL-"+query.tokenUser+"-AE-EN?callback=?",
                     data: {
                         eventTitle: query.eventTitle,
                         eventDescription: query.eventDescription,
